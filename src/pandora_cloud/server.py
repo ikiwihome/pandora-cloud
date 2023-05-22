@@ -6,9 +6,9 @@ from os import getenv
 from os.path import join, abspath, dirname
 
 from flask import Flask, jsonify, request, render_template, redirect, url_for, make_response
-from pandora.exts.hooks import hook_logging
-from pandora.exts.token import check_access_token
-from pandora.openai.auth import Auth0
+from pandora_cloud.exts.hooks import hook_logging
+from pandora_cloud.exts.token import check_access_token
+from pandora_cloud.openai.auth import Auth0
 from waitress import serve
 from werkzeug.middleware.proxy_fix import ProxyFix
 from werkzeug.serving import WSGIRequestHandler
@@ -17,7 +17,7 @@ from . import __version__
 
 
 class ChatBot:
-    __default_ip = '127.0.0.1'
+    __default_ip = '0.0.0.0'
     __default_port = 8080
     __build_id = '35uzIQibpwv56FyPcgmGz'
 

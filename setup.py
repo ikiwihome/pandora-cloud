@@ -7,6 +7,9 @@ from src.pandora_cloud import __version__
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
+with open('requirements.txt', 'r', encoding='utf-8') as f:
+    requirements = f.read().split('\n')
+
 setup(
     name='Pandora-Cloud',
     version=__version__,
@@ -14,19 +17,25 @@ setup(
     author='ikiwi',
     author_email='ikiwicc@gmail.com',
     keywords='OpenAI ChatGPT ChatGPT-Plus',
-    description='A web package for ChatGPT',
+    description='A true web for ChatGPT',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/ikiwihome/pandora-cloud',
     packages=find_packages('src'),
     package_dir={'pandora_cloud': 'src/pandora_cloud'},
     include_package_data=True,
+    install_requires=requirements,
+    entry_points={
+        'console_scripts': [
+            'pandora = pandora_cloud.cloud_launcher:run',
+        ]
+    },
     project_urls={
         'Source': 'https://github.com/ikiwihome/pandora-cloud',
         'Tracker': 'https://github.com/ikiwihome/pandora-cloud/issues',
     },
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
 
         'Environment :: Web Environment',
 

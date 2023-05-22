@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PANDORA_ARGS=""
-PANDORA_COMMAND="pandora-cloud"
+PANDORA_COMMAND="pandora"
 USER_CONFIG_DIR="/data"
 
 if [ -n "${PANDORA_PROXY}" ]; then
