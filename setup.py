@@ -20,7 +20,7 @@ setup(
     description='A true web for ChatGPT',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/ikiwihome/pandora-cloud',
+    url='https://github.com/ikiwihome/pandora',
     packages=find_packages('src'),
     package_dir={'pandora_cloud': 'src/pandora_cloud'},
     include_package_data=True,
@@ -31,8 +31,8 @@ setup(
         ]
     },
     project_urls={
-        'Source': 'https://github.com/ikiwihome/pandora-cloud',
-        'Tracker': 'https://github.com/ikiwihome/pandora-cloud/issues',
+        'Source': 'https://github.com/ikiwihome/pandora',
+        'Tracker': 'https://github.com/ikiwihome/pandora/issues',
     },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
