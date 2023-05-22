@@ -37,16 +37,17 @@
 
   ```shell
   docker pull ikiwicc/pandora:latest
-  docker run -d --name pandora -h pandora --restart=unless-stopped -e TZ="Asia/Shanghai" ikiwicc/pandora:latest
+  docker run -d --name pandora -h pandora --restart=unless-stopped -e TZ="Asia/Shanghai" -e PANDORA_PROXY="http://127.0.0.1:7890" ikiwicc/pandora:latest
   ```
 
 * Docker编译运行
 
   ```shell
   docker build -t pandora .
-  docker run -d --name pandora -h pandora --restart=unless-stopped -p 8080:8080 -e TZ="Asia/Shanghai" pandora
+  docker run -d --name pandora -h pandora --restart=unless-stopped -p 8080:8080 -e TZ="Asia/Shanghai" -e PANDORA_PROXY="http://127.0.0.1:7890" pandora
   ```
 
+* PANDORA_PROXY这个代理地址一定要在美国！！！
 * 输入用户名密码登录即可，登录密码理论上不显示出来，莫慌。
 * 简单而粗暴，不失优雅。
 
