@@ -18,7 +18,7 @@ from . import __version__
 
 class ChatBot:
     __default_ip = '127.0.0.1'
-    __default_port = 8018
+    __default_port = 8080
     __build_id = '35uzIQibpwv56FyPcgmGz'
 
     def __init__(self, proxy, debug=False, sentry=False, login_local=False):
